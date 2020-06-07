@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Overheat",
+			"Path": "D:\\Bigger GitHub Projects\\GitHub\\Overheat\\Overheat\\Source\\Overheat.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "OverheatEditor",
+			"Path": "D:\\Bigger GitHub Projects\\GitHub\\Overheat\\Overheat\\Source\\OverheatEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

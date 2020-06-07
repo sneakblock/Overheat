@@ -1,0 +1,35 @@
+﻿  Cleaning OverheatEditor and UnrealHeaderTool binaries...
+UnrealBuildTool : error : Unable to delete D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Binaries\Win64\UE4Editor-Overheat.dll (Access to the path 'D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Binaries\Win64\UE4Editor-Overheat.dll' is denied.)
+  Using 'git status' to determine working set for adaptive non-unity build (D:\Bigger GitHub Projects\GitHub\Overheat).
+  Creating makefile for OverheatEditor (no existing makefile)
+  Parsing headers for OverheatEditor
+    Running UnrealHeaderTool "D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Overheat.uproject" "D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Intermediate\Build\Win64\OverheatEditor\Development\OverheatEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -installed
+  Reflection code generated for OverheatEditor in 24.6440936 seconds
+  Building OverheatEditor...
+  Using Visual Studio 2019 14.23.28107 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.23.28105) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 11 actions with 4 processes...
+    [1/11] Default.rc2
+    [2/11] SharedPCH.Engine.ShadowErrors.cpp
+    [3/11] Overheat.init.gen.cpp
+    [4/11] OverheatGameMode.cpp
+D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Source\Overheat\OverheatCharacter.h(60): warning C4263: 'void AOverheatCharacter::TakeDamage(float)': member function does not override any base class virtual member function
+D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Source\Overheat\OverheatCharacter.h(81): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+    C:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h(14): note: see declaration of 'APawn'
+    [5/11] OverheatCharacter.gen.cpp
+D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Source\Overheat/OverheatCharacter.h(60): warning C4263: 'void AOverheatCharacter::TakeDamage(float)': member function does not override any base class virtual member function
+D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Source\Overheat/OverheatCharacter.h(81): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+    C:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(24): note: see declaration of 'APawn'
+    [6/11] OverheatGameMode.gen.cpp
+    [7/11] Overheat.cpp
+    [8/11] OverheatCharacter.cpp
+D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Source\Overheat\OverheatCharacter.h(60): warning C4263: 'void AOverheatCharacter::TakeDamage(float)': member function does not override any base class virtual member function
+D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Source\Overheat\OverheatCharacter.h(81): warning C4264: 'float APawn::TakeDamage(float,const FDamageEvent &,AController *,AActor *)': no override available for virtual member function from base 'APawn'; function is hidden
+    C:\Program Files (x86)\UE_4.24\Engine\Source\Runtime\Engine\Classes\GameFramework/Pawn.h(247): note: see declaration of 'APawn::TakeDamage'
+    C:\Program Files (x86)\UE_4.24\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\AnimInstance.generated.h(24): note: see declaration of 'APawn'
+    [9/11] UE4Editor-Overheat-0001.dll
+LINK : fatal error LNK1104: cannot open file 'D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Binaries\Win64\UE4Editor-Overheat-0001.dll'
+    [10/11] UE4Editor-Overheat-0001.lib
+       Creating library D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Intermediate\Build\Win64\UE4Editor\Development\Overheat\UE4Editor-Overheat-0001.lib and object D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Intermediate\Build\Win64\UE4Editor\Development\Overheat\UE4Editor-Overheat-0001.exp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(49,5): error MSB3073: The command ""C:\Program Files (x86)\UE_4.24\Engine\Build\BatchFiles\Rebuild.bat" OverheatEditor Win64 Development -Project="D:\Bigger GitHub Projects\GitHub\Overheat\Overheat\Overheat.uproject" -WaitMutex -FromMsBuild" exited with code -1.
