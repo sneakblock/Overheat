@@ -17,11 +17,51 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 	OVERHEAT_API UClass* Z_Construct_UClass_AOverheatCharacter();
 	ENGINE_API UClass* Z_Construct_UClass_ACharacter();
 	UPackage* Z_Construct_UPackage__Script_Overheat();
+	OVERHEAT_API UFunction* Z_Construct_UFunction_AOverheatCharacter_TakeDamage();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 // End Cross Module References
 	void AOverheatCharacter::StaticRegisterNativesAOverheatCharacter()
 	{
+		UClass* Class = AOverheatCharacter::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "TakeDamage", &AOverheatCharacter::execTakeDamage },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics
+	{
+		struct OverheatCharacter_eventTakeDamage_Parms
+		{
+			float damageAmount;
+		};
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_damageAmount;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::NewProp_damageAmount = { "damageAmount", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(OverheatCharacter_eventTakeDamage_Parms, damageAmount), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::NewProp_damageAmount,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::Function_MetaDataParams[] = {
+		{ "Comment", "//Damage the Player.\n" },
+		{ "ModuleRelativePath", "OverheatCharacter.h" },
+		{ "ToolTip", "Damage the Player." },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AOverheatCharacter, nullptr, "TakeDamage", nullptr, nullptr, sizeof(OverheatCharacter_eventTakeDamage_Parms), Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04080401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_AOverheatCharacter_TakeDamage()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AOverheatCharacter_TakeDamage_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_AOverheatCharacter_NoRegister()
 	{
@@ -30,6 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 	struct Z_Construct_UClass_AOverheatCharacter_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -65,6 +106,9 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 	UObject* (*const Z_Construct_UClass_AOverheatCharacter_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_ACharacter,
 		(UObject* (*)())Z_Construct_UPackage__Script_Overheat,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_AOverheatCharacter_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_AOverheatCharacter_TakeDamage, "TakeDamage" }, // 2791323018
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOverheatCharacter_Statics::Class_MetaDataParams[] = {
@@ -149,11 +193,11 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_AOverheatCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_AOverheatCharacter_Statics::PropPointers),
 		0,
 		0x008000A4u,
@@ -168,7 +212,7 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AOverheatCharacter, 3828670976);
+	IMPLEMENT_CLASS(AOverheatCharacter, 1940859915);
 	template<> OVERHEAT_API UClass* StaticClass<AOverheatCharacter>()
 	{
 		return AOverheatCharacter::StaticClass();

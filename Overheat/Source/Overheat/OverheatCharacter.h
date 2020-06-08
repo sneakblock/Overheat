@@ -57,7 +57,8 @@ protected:
 	void LookUpAtRate(float Rate);
 
 	//Damage the Player.
-	void TakeDamage(float damageAmount);
+	UFUNCTION(BlueprintCallable)
+		void TakeDamage(float damageAmount);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 		float playerHealth;

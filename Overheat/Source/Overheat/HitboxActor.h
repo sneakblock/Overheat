@@ -37,6 +37,10 @@ public:
 	//The locationto spawn the hitbox.
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hitbox")
 		FVector hitboxLocation;
+	
+	//The damage a hitbox will do
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hitbox")
+		float hitboxDamage;
 
 protected:
 	// Called when the game starts or when spawned

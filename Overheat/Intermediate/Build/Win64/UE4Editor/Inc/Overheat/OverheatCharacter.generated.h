@@ -14,8 +14,30 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define OVERHEAT_OverheatCharacter_generated_h
 
 #define Overheat_Source_Overheat_OverheatCharacter_h_12_SPARSE_DATA
-#define Overheat_Source_Overheat_OverheatCharacter_h_12_RPC_WRAPPERS
-#define Overheat_Source_Overheat_OverheatCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Overheat_Source_Overheat_OverheatCharacter_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execTakeDamage) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_damageAmount); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->TakeDamage(Z_Param_damageAmount); \
+		P_NATIVE_END; \
+	}
+
+
+#define Overheat_Source_Overheat_OverheatCharacter_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execTakeDamage) \
+	{ \
+		P_GET_PROPERTY(UFloatProperty,Z_Param_damageAmount); \
+		P_FINISH; \
+		P_NATIVE_BEGIN; \
+		P_THIS->TakeDamage(Z_Param_damageAmount); \
+		P_NATIVE_END; \
+	}
+
+
 #define Overheat_Source_Overheat_OverheatCharacter_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAOverheatCharacter(); \

@@ -21,8 +21,8 @@ void EmptyLinkFunctionForGeneratedCodeOverheat_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x90A7CE0F,
-				0xB2D21DCD,
+				0xF07BE9EE,
+				0x7673081F,
 				METADATA_PARAMS(nullptr, 0)
 			};
 			UE4CodeGen_Private::ConstructUPackage(ReturnPackage, PackageParams);
