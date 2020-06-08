@@ -34,6 +34,11 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_wasFirstAttackUsed_MetaData[];
+#endif
+		static void NewProp_wasFirstAttackUsed_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_wasFirstAttackUsed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_playerHealth_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_playerHealth;
@@ -68,6 +73,19 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 		{ "ModuleRelativePath", "OverheatCharacter.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_wasFirstAttackUsed_MetaData[] = {
+		{ "Category", "Attacks" },
+		{ "Comment", "//Has the player used the basic attack?\n" },
+		{ "ModuleRelativePath", "OverheatCharacter.h" },
+		{ "ToolTip", "Has the player used the basic attack?" },
+	};
+#endif
+	void Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_wasFirstAttackUsed_SetBit(void* Obj)
+	{
+		((AOverheatCharacter*)Obj)->wasFirstAttackUsed = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_wasFirstAttackUsed = { "wasFirstAttackUsed", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AOverheatCharacter), &Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_wasFirstAttackUsed_SetBit, METADATA_PARAMS(Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_wasFirstAttackUsed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_wasFirstAttackUsed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_playerHealth_MetaData[] = {
 		{ "Category", "Health" },
@@ -116,6 +134,7 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_CameraBoom = { "CameraBoom", nullptr, (EPropertyFlags)0x00400000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AOverheatCharacter, CameraBoom), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_CameraBoom_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_CameraBoom_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AOverheatCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_wasFirstAttackUsed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_playerHealth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_BaseLookUpRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AOverheatCharacter_Statics::NewProp_BaseTurnRate,
@@ -149,7 +168,7 @@ void EmptyLinkFunctionForGeneratedCodeOverheatCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AOverheatCharacter, 650647274);
+	IMPLEMENT_CLASS(AOverheatCharacter, 3828670976);
 	template<> OVERHEAT_API UClass* StaticClass<AOverheatCharacter>()
 	{
 		return AOverheatCharacter::StaticClass();

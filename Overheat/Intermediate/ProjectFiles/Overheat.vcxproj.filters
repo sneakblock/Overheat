@@ -54,4 +54,14 @@
       <Filter>Source\Overheat</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Overheat\HitboxActor.h">
+      <Filter>Source\Overheat</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Overheat\HitboxActor.cpp">
+      <Filter>Source\Overheat</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

@@ -47,6 +47,7 @@ AOverheatCharacter::AOverheatCharacter()
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
 
 	this->playerHealth = 1.0f;
+	this->wasFirstAttackUsed = false;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -144,6 +145,7 @@ void AOverheatCharacter::MoveRight(float Value)
 
 void AOverheatCharacter::StartLightAttack() {
 	UE_LOG(LogTemp, Warning, TEXT("Light attack!"));
+	this->wasFirstAttackUsed = true;
 }
 
 void AOverheatCharacter::StartHeavyAttack() {

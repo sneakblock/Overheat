@@ -61,6 +61,10 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
 		float playerHealth;
+	//Has the player used the basic attack?
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attacks")
+		bool wasFirstAttackUsed;
+
 
 	/** Handler for when a touch input begins. */
 	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);

@@ -61,7 +61,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AOverheatCharacter); \
 #define Overheat_Source_Overheat_OverheatCharacter_h_12_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CameraBoom() { return STRUCT_OFFSET(AOverheatCharacter, CameraBoom); } \
 	FORCEINLINE static uint32 __PPO__FollowCamera() { return STRUCT_OFFSET(AOverheatCharacter, FollowCamera); } \
-	FORCEINLINE static uint32 __PPO__playerHealth() { return STRUCT_OFFSET(AOverheatCharacter, playerHealth); }
+	FORCEINLINE static uint32 __PPO__playerHealth() { return STRUCT_OFFSET(AOverheatCharacter, playerHealth); } \
+	FORCEINLINE static uint32 __PPO__wasFirstAttackUsed() { return STRUCT_OFFSET(AOverheatCharacter, wasFirstAttackUsed); }
 
 
 #define Overheat_Source_Overheat_OverheatCharacter_h_9_PROLOG
