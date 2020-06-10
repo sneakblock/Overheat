@@ -72,3 +72,6 @@ Overheat/Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 Overheat/DerivedDataCache/*
+
+#trying not to get in legal trouble
+Overheat/Content/Plugins/*

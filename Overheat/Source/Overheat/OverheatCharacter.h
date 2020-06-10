@@ -66,6 +66,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attacks")
 		bool wasFirstAttackUsed;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hitbox")
+		AActor* hurtbox;
+
 
 	/** Handler for when a touch input begins. */
 	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
