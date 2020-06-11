@@ -37,6 +37,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	UFUNCTION(BlueprintCallable, Category = "Health")
+		void DamageCharacter(float damgeAmount);
+
 protected:
 
 	/** Resets HMD orientation in VR. */
@@ -65,6 +68,9 @@ protected:
 
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Categore = "Health")
+		float health;
 
 protected:
 	// APawn interface

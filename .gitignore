@@ -74,4 +74,5 @@ Overheat/Plugins/*/Intermediate/*
 Overheat/DerivedDataCache/*
 
 #trying not to get in legal trouble
-Overheat/Content/Plugins/*
+Overheat/Content/FighterAnimationPack/*
+
