@@ -1,16 +1,20 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.24",
+	"EngineAssociation": "4.23",
 	"Category": "",
 	"Description": "",
 	"Modules": [
 		{
 			"Name": "Overheat",
 			"Type": "Runtime",
-			"LoadingPhase": "Default",
-			"AdditionalDependencies": [
-				"Engine"
-			]
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{
+			"Name": "ComboSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/9247a717c61b492da93f4af1524a3401"
 		}
 	]
 }

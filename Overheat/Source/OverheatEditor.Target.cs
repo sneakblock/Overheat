@@ -8,7 +8,6 @@ public class OverheatEditorTarget : TargetRules
 	public OverheatEditorTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Editor;
-		DefaultBuildSettings = BuildSettingsVersion.V2;
 		ExtraModuleNames.Add("Overheat");
 	}
 }

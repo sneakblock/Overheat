@@ -45,9 +45,6 @@ AOverheatCharacter::AOverheatCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
-
-	this->playerHealth = 1.0f;
-	this->wasFirstAttackUsed = false;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -62,13 +59,6 @@ void AOverheatCharacter::SetupPlayerInputComponent(class UInputComponent* Player
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AOverheatCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AOverheatCharacter::MoveRight);
-
-	PlayerInputComponent->BindAction("LightAttack", IE_Pressed, this, &AOverheatCharacter::StartLightAttack);
-	//PlayerInputComponent->BindAction("LightAttack", IE_Released, this, &AOverheatCharacter::StopLightAttack);
-	PlayerInputComponent->BindAction("HeavyAttack", IE_Pressed, this, &AOverheatCharacter::StartHeavyAttack);
-	//PlayerInputComponent->BindAction("HeavyAttack", IE_Released, this, &AOverheatCharacter::StopHeavyAttack);
-	PlayerInputComponent->BindAction("SpecialAttack", IE_Pressed, this, &AOverheatCharacter::StartSpecialAttack);
-	//PlayerInputComponent->BindAction("SpecialAttack", IE_Released, this, &AOverheatCharacter::StopSpecialAttack);
 
 	// We have 2 versions of the rotation bindings to handle different kinds of devices differently
 	// "turn" handles devices that provide an absolute delta, such as a mouse.
@@ -142,27 +132,3 @@ void AOverheatCharacter::MoveRight(float Value)
 		AddMovementInput(Direction, Value);
 	}
 }
-
-void AOverheatCharacter::StartLightAttack() {
-	UE_LOG(LogTemp, Warning, TEXT("Light attack!"));
-	this->wasFirstAttackUsed = true;
-}
-
-void AOverheatCharacter::StartHeavyAttack() {
-	UE_LOG(LogTemp, Warning, TEXT("Heavy attack!"));
-}
-
-void AOverheatCharacter::StartSpecialAttack() {
-	UE_LOG(LogTemp, Warning, TEXT("Special attack!"));
-	TakeDamage(0.05);
-}
-
-void AOverheatCharacter::TakeDamage(float damageAmount) {
-	UE_LOG(LogTemp, Warning, TEXT("We are taking damage for %f points."), damageAmount);
-	playerHealth -= damageAmount;
-
-	if (playerHealth < 0.0f) {
-		playerHealth = 0.0f;
-	}
-}
-

@@ -6,6 +6,14 @@
 #include "GameFramework/Character.h"
 #include "OverheatCharacter.generated.h"
 
+UENUM(BlueprintType, Category = "Combo")
+enum class EPlayerStrikeEnum : uint8 {
+	LIGHT		UMETA(DisplayName = "Light Attack"),
+	HEAVY       UMETA(DisplayName = "Heavy Attack"),
+	SPECIAL		UMETA(DisplayName = "Special Attack")
+
+};
+
 UCLASS(config=Game)
 class AOverheatCharacter : public ACharacter
 {
@@ -18,10 +26,6 @@ class AOverheatCharacter : public ACharacter
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
-
-	void StartLightAttack();
-	void StartHeavyAttack();
-	void StartSpecialAttack();
 public:
 	AOverheatCharacter();
 
@@ -55,20 +59,6 @@ protected:
 	 * @param Rate	This is a normalized rate, i.e. 1.0 means 100% of desired turn rate
 	 */
 	void LookUpAtRate(float Rate);
-
-	//Damage the Player.
-	UFUNCTION(BlueprintCallable)
-		void TakeDamage(float damageAmount);
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Health")
-		float playerHealth;
-	//Has the player used the basic attack?
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attacks")
-		bool wasFirstAttackUsed;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hitbox")
-		AActor* hurtbox;
-
 
 	/** Handler for when a touch input begins. */
 	void TouchStarted(ETouchIndex::Type FingerIndex, FVector Location);
