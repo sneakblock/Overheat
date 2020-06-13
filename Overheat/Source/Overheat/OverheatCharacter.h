@@ -69,7 +69,7 @@ protected:
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Categore = "Health")
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Health")
 		float health;
 
 protected:
