@@ -46,9 +46,11 @@ protected:
 	void OnResetVR();
 
 	/** Called for forwards/backward input */
+	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void MoveForward(float Value);
 
 	/** Called for side to side input */
+	UFUNCTION(BlueprintCallable, Category = "Movement")
 	void MoveRight(float Value);
 
 	/** 
