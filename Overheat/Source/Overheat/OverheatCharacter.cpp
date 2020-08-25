@@ -128,6 +128,7 @@ void AOverheatCharacter::MoveRight(float Value)
 	
 		// get right vector 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}

@@ -73,7 +73,7 @@ Overheat/Plugins/*/Intermediate/*
 # Cache files for the editor to use
 Overheat/DerivedDataCache/*
 
-#trying not to get in legal trouble
-Overheat/Content/FighterAnimationPack/*
-Overheat/Content/DynamicLocomotion/*
+#trying not to get in legal trouble (currently commented out because the team needs to be able to access these)
+#Overheat/Content/FighterAnimationPack/*
+#Overheat/Content/DynamicLocomotion/*
 

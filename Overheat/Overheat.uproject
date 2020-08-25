@@ -15,6 +15,11 @@
 			"Name": "ComboSystem",
 			"Enabled": true,
 			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/9247a717c61b492da93f4af1524a3401"
+		},
+		{
+			"Name": "TargetSystem",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/6bd21ce58d6e4cb295f71bd370233f53"
 		}
 	]
 }
