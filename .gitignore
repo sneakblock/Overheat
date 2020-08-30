@@ -77,3 +77,6 @@ Overheat/DerivedDataCache/*
 #Overheat/Content/FighterAnimationPack/*
 #Overheat/Content/DynamicLocomotion/*
 
+#Trying to get plugins to work
+!Overheat/Plugins/*
+

@@ -1,0 +1,36 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.3",
+	"FriendlyName": "Combo System",
+	"Description": "",
+	"Category": "Code Plugins",
+	"CreatedBy": "Jonathan F.",
+	"CreatedByURL": "",
+	"DocsURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/9247a717c61b492da93f4af1524a3401",
+	"SupportURL": "",
+	"EngineVersion": "4.23.0",
+	"CanContainContent": true,
+	"Installed": true,
+	"Modules": [
+		{
+			"Name": "ComboSystemEditor",
+			"Type": "Editor",
+			"LoadingPhase": "PreDefault",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32"
+			]
+		},
+		{
+			"Name": "ComboSystem",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"WhitelistPlatforms": [
+				"Win64",
+				"Win32"
+			]
+		}
+	]
+}

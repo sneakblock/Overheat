@@ -1,0 +1,8 @@
+{
+	"BuildId": "8386587",
+	"Modules": 
+	{
+		"ComboSystem": "UE4Editor-ComboSystem.dll",
+		"ComboSystemEditor": "UE4Editor-ComboSystemEditor.dll"
+	}
+}
