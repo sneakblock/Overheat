@@ -10,7 +10,11 @@ UENUM(BlueprintType, Category = "Combo")
 enum class EPlayerStrikeEnum : uint8 {
 	LIGHT		UMETA(DisplayName = "Light Attack"),
 	HEAVY       UMETA(DisplayName = "Heavy Attack"),
-	SPECIAL		UMETA(DisplayName = "Special Attack")
+	SPECIAL		UMETA(DisplayName = "Special Attack"),
+	FORWARD_LIGHT   UMETA(DisplayName = "Light Attack + Lock-On + Forward"),
+	BACK_LIGHT		UMETA(DisplayName = "Light Attack + Lock-On + Backward"),
+	FORWARD_HEAVY   UMETA(DisplayName = "Heavy Attack + Lock-On + Forward"),
+	BACK_HEAVY		UMETA(DisplayName = "Heavy Attack + Lock-On + Backward"),
 
 };
 
@@ -36,9 +40,6 @@ public:
 	/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
-
-	UFUNCTION(BlueprintCallable, Category = "Health")
-		void DamageCharacter(float damgeAmount);
 
 protected:
 
@@ -70,9 +71,6 @@ protected:
 
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Health")
-		float health;
 
 protected:
 	// APawn interface

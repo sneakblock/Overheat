@@ -133,11 +133,3 @@ void AOverheatCharacter::MoveRight(float Value)
 		AddMovementInput(Direction, Value);
 	}
 }
-
-void AOverheatCharacter::DamageCharacter(float damageAmount) {
-	this->health -= damageAmount;
-	if (this->health < 0) {
-		this->health = 0;
-		//also maybe death logic?
-	}
-}
