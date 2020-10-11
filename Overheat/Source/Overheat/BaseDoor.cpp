@@ -25,11 +25,11 @@ void ABaseDoor::Tick(float DeltaTime)
 
 }
 
-void ABaseDoor::OpenDoor() {
+void ABaseDoor::ControlDoor() {
 	
 }
 
-void ABaseDoor::CloseDoor() {
+void ABaseDoor::ToggleDoor() {
 
 }
 

@@ -4,6 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "BaseDoor.h"
+#include "Curves/CurveFloat.h"
+#include "Components/StaticMeshComponent.h"
+#include "Components/TimelineComponent.h"
+#include "Components/SceneComponent.h"
 #include "DoubleDoors.generated.h"
 
 /**
@@ -14,24 +18,49 @@ class OVERHEAT_API ADoubleDoors : public ABaseDoor
 {
 	GENERATED_BODY()
 
+
 public:
+	//constructor
 	ADoubleDoors();
 
-	UPROPERTY(BlueprintReadWrite, )
-	UStaticMesh* LeftDoor;
+	UPROPERTY(EditAnywhere)
+		USceneComponent* rootComp;
+
+	UPROPERTY(EditAnywhere)
+		USceneComponent* childSceneComponent;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* LeftDoor;
+
+	UPROPERTY(EditAnywhere)
+	UStaticMeshComponent* RightDoor;
+
+	UPROPERTY(EditAnywhere, Category = "Timeline")
+	class UCurveFloat* openCurve;
 
 	UPROPERTY()
-	UStaticMesh* RightDoor;
+	float openRotation;
 
-	UFUNCTION(BlueprintCallable)
-	virtual void OpenDoor() override;
+	UPROPERTY()
+	float closedRotation;
 
-	UFUNCTION(BlueprintCallable)
-	virtual void CloseDoor() override;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite = "Rotation")
+		float amountToRotate;
+
+	UTimelineComponent* timeline;
+	float timelineValue;
+	float openCurveValue;
+	bool open;
+
+	
+	UFUNCTION()
+	virtual void ControlDoor();
+
+	virtual void ToggleDoor();
 
 protected:
 	// Called when the game starts or when spawned
-	void BeginPlay() override;
+	virtual void BeginPlay() override;
 
 public:
 	// Called every frame

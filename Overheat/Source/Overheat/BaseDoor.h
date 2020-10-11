@@ -14,11 +14,10 @@ class OVERHEAT_API ABaseDoor : public AActor
 public:	
 	// Sets default values for this actor's properties
 	ABaseDoor();
-	UFUNCTION(BlueprintCallable)
-	virtual void OpenDoor();
+	virtual void ControlDoor();
 
 	UFUNCTION(BlueprintCallable)
-	virtual void CloseDoor();
+	virtual void ToggleDoor();
 
 
 protected:
