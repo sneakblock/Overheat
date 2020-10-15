@@ -50,6 +50,7 @@ public:
 	UTimelineComponent* timeline;
 	float timelineValue;
 	float openCurveValue;
+	UPROPERTY(BlueprintReadWrite, Category = "Timeline")
 	bool open;
 
 	

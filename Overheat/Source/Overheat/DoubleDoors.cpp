@@ -23,7 +23,6 @@ ADoubleDoors::ADoubleDoors()
 
 	amountToRotate = 150.0f;
 	open = true;
-	UE_LOG(LogTemp, Warning, TEXT("So annoying"));
 
 }
 
